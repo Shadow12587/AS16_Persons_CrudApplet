@@ -13,6 +13,9 @@ if(!isset($_SESSION['email'])) {
 
 <h1>Users List</h1>
 
+<h2>Signed in as: <?php echo $_SESSION['email']?> </h2>
+<h2>Role: <?php echo $_SESSION['role']?> </h2>
+
 <body>
 	<button class="btn btn-lg btn-primary" onclick="window.location.href = 'display_create_form.php'"
 	name="create">Create</button>

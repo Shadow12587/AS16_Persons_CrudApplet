@@ -10,8 +10,6 @@
         && !empty($_POST['email'])
         && !empty($_POST['password'])) {
         
-        echo "<script>console.log('HIT');</script>";
-
         $_POST['email'] = htmlspecialchars($_POST['email']);
         $_POST['password'] = htmlspecialchars($_POST['password']);
 
@@ -85,16 +83,22 @@
                 name="login">Login</button>
                 
                 <button class="btn btn-lg btn-secondary btn-block" type="submit"
-                onclick="window.location.href = 'register.php';";
+                onclick="location.href = 'register.php';"
                 name="Join">Join</button> <br> <br>
-
-                <button class="btn btn-lg btn-secondary" type="submit"
-                onclick="window.location.href = 'register.php';";
-                name="github">GITHUB REPO</button>
                     
+
             </form>
+
+            <style>
+            button {
+                padding-left: 100px;
+            }
+            </style>
+
+            <a class='btn btn-lg btn-secondary' role='button' href='https://github.com/Shadow12587/AS16_Persons_CrudApplet.git'>GITHUB REPO</a>
+
         </div>
 
-
     </body>
+
 </html>
