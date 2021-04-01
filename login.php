@@ -72,11 +72,11 @@
                 <p style="color:red;"><?php echo $errMsg; ?></p>
                 
                 <input type="text" class="form control" 
-                name="email" placeholder="admin@admin.com"
+                name="email" placeholder="user@user.com"
                 required autofocus /> <br />
                 
                 <input type="password" class="form control" 
-                name="password" placeholder="admin"
+                name="password" placeholder="user"
                 required /> <br /> <br>
                 
                 <button class="btn btn-lg btn-primary btn-block" type="submit"
