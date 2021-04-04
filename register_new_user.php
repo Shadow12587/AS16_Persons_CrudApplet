@@ -1,10 +1,5 @@
-<head>
-    <meta charset ="utf-8" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-</head>
-
-
 <?php
+session_start();
 
 # This process inserts a new user into mes_person table. There is no display.
 
@@ -12,7 +7,6 @@
 require '../database/database.php';
 $pdo = Database::connect();
 
-session_start();
 $_POST = $_SESSION['register_post_array'];
 
 # 2. assign username / password to a variable
@@ -41,6 +35,11 @@ $query->execute(Array("User", $fname, $lname, $email, $phone, $password_hash, $p
 echo "<p>Your info has been added. You can now log in!</p><br>";
 
 ?>
+
+<head>
+    <meta charset ="utf-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+</head>
 
 <button class="btn btn-lg btn-primary" onclick="window.location.href = 'login.php'"
 name="list">Back to display list</button>
