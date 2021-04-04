@@ -1,13 +1,5 @@
-<head>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-        <style>
-            form {
-                padding-left: 10px;
-            }
-        </style>
-    </head>
-
 <?php
+session_start();
 
 if($_POST) {
     # 2. assign username / password to a variable
@@ -108,8 +100,6 @@ if($_POST) {
             }
             
             else{
-                session_start();
-
                 $_SESSION['register_post_array'] = $_POST;
                 header('Location: register_new_user.php');
             }
@@ -130,6 +120,15 @@ if($_POST) {
 
 ?>
 
+<head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+        <style>
+            form {
+                padding-left: 10px;
+            }
+        </style>
+    </head>
+    
 <h1>Register new user</h1>
 <form method='post' action='' name = 'register_form'>
 
