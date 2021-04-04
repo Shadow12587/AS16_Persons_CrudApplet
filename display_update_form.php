@@ -19,6 +19,7 @@ if($_SESSION['role'] == "Admin" || $_SESSION['id'] == $_GET['id']) {
         $fname = $_POST['fname'];
         $lname = $_POST['lname'];
         $email = $_POST['email'];
+        $phone = $_POST['phone'];
         $address = $_POST['address'];
         $address2 = $_POST['address2'];
         $city = $_POST['city'];
@@ -29,6 +30,7 @@ if($_SESSION['role'] == "Admin" || $_SESSION['id'] == $_GET['id']) {
         $fname = htmlspecialchars($fname);
         $lname = htmlspecialchars($lname);
         $email = htmlspecialchars($email);
+        $phone = htmlspecialchars($phone);
         $address = htmlspecialchars($address);
         $address2 = htmlspecialchars($address2);
         $city = htmlspecialchars($city);
@@ -167,4 +169,4 @@ else {
     <?php
 }
 ?>
-    
+ 
