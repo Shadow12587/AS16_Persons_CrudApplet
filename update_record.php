@@ -5,15 +5,6 @@ if(!isset($_SESSION['email'])) {
     header("Location: login.php");
 }
 
-?>
-
-
-<head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-</head>
-
-<?php
-
 
 # This process updates a record. There is no display.
 
@@ -57,6 +48,10 @@ $pdo->query($sql); # execute the query
 echo "<p>Your info has been updated</p><br>";
 
 ?>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+</head>
 
 <button class="btn btn-lg btn-primary" onclick="window.location.href = 'display_list.php'"
 name="list">Back to display list</button>
