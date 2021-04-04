@@ -5,15 +5,6 @@ if(!isset($_SESSION['email'])) {
     header("Location: login.php");
 }
 
-?>
-
-
-<head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-</head>
-
-<?php
-
 # This process inserts a new user into mes_person table. There is no display.
 
 # 1. connect to database
@@ -48,6 +39,9 @@ $query->execute(Array("User", $fname, $lname, $email, $phone, $password_hash, $p
 echo "<p>User info has been added. They can now log in!</p><br>";
 
 ?>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+</head>
 
 <button class="btn btn-lg btn-primary" onclick="window.location.href = 'display_list.php'"
 name="list">Back to display list</button>
